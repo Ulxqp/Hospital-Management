@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<style>
+    /* Vaccination table */
+    table {
+        background-color: #ffffff;
+        border-collapse: collapse;
+        width: 95%;
+        max-width: 800px;
+        margin: 20px auto;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+
+    th, td {
+        padding: 0.45rem 0.6rem;
+        border: 1px solid #ddd;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 0.88rem;
+    }
+
+
+    th {
+        background-color: #f2f2f2;
+        font-weight: 600;
+    }
+
+
+    tr:hover td {
+        background-color: #f9f9f9;
+    }
+
+
+    caption {
+        caption-side: top;
+        text-align: center;
+        padding: 0.6rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #1a73e8;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
+
+
+        table, th, td {
+            font-size: 0.9rem;
+            padding: 0.7rem;
+        }
+
+
+        /*Services table */
+        #services{
+        border: 1;
+        width:100%;
+        border-collapse: separate;
+        text-align:left;
+        }
+
+
+        h1{
+            color:  #1a73e8;
+        }
+
+
+        /* Navigation Bar */
+        #mainHeader {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #1565c0, #1e88e5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.4s ease;
+                    }
+
+
+        #logoContainer {
+            padding: 10px 0;
+            transition: all 0.4s ease;
+        }
+
+
+        #siteLogo{
+            display: block;
+            margin: auto;
+            transition: all 0.4s ease;
+        }
+
+
+        h1, h2, h3 {
+        color: #1976d2;
+    }
+
+     footer {
+      background-color: #b3e5fc;
+      margin-top: 40px;
+      padding: 30px 20px;
+      font-size: 14px;
+      color: #444;
+    }
+</style>
+<body>
+
+
+    <header id="mainHeader">
+        <div id="logoContainer">
+            <img id="siteLogo" src="logo3.png" width="120" height="120">
+        </div>
+
+
+        <nav id="navbar" style="display: flex; justify-content: center; align-items: center; height: 60px; width: 100%; transition: all 0.4s ease;">
+            <a href="home.html" class="nav-link" style="margin: 0 25px; color: white; font-family: 'Segoe UI'; font-size: 18px; text-decoration: none;"><b>Home</b></a>
+            <a href="announcements.html" class="nav-link" style="margin: 0 25px; color: white; font-family: 'Segoe UI'; font-size: 18px; text-decoration: none;"><b>Announcements</b></a>
+            <a href="services.html" class="nav-link" style="margin: 0 25px; color: white; font-family: 'Segoe UI'; font-size: 18px; text-decoration: none;"><b>Services</b></a>
+            <a href="contact.html" class="nav-link" style="margin: 0 25px; color: white; font-family: 'Segoe UI'; font-size: 18px; text-decoration: none;"><b>Contact</b></a>
+            <a href="about.html" class="nav-link" style="margin: 0 25px; color: white; font-family: 'Segoe UI'; font-size: 18px; text-decoration: none;"><b>About Us</b></a>
+        </nav>
+    </header>
+<main style="margin-top: 300px;">
+    <h1 id="latestNews">Latest Health Announcements</h1>
+    <aside>
+    <div class="search-bar">
+        <input id="search" type="search" placeholder=" Search announcements..." list="search-suggestions" >
+        <datalist id="search-suggestions">
+            <option value="Vaccines">
+            <option value="DOH Announcements">
+            <option value="Health Services">
+            <option value="Latest News">
+        </datalist>
+    </div>
+    </aside>
+</div>
+<div class="NewsContainer">
+        <div class="NewsSection">
+            <img src="images/Health Program.jpg" alt="Health Program">
+            <div class="news-content">
+                <h2>Medical Center Launches New Health Program</h2>
+                <p class="date">October 28, 2025</p>
+                <p>The City Medical Center introduces a new wellness campaign offering free checkups and seminars for preventive care.</p>
+            </div>
+           
+        </div>
+
+
+        <div class="NewsSection">
+            <img src="images/Vaccination.jpg" alt="Vaccination">
+            <div class="news-content">
+                <h2>Free Vaccination Drive This Weekend</h2>
+                <p class="date">October 26, 2025</p>
+                <p>Residents are invited to join the upcoming vaccination drive for flu and dengue at the City Hall grounds.</p>
+            </div>
+        </div>
+
+
+        <div class="NewsSection">
+            <img src="images/Health wing.jpg" alt="Health wing">
+            <div class="news-content">
+                <h2>New Outpatient Wing Opens</h2>
+                <p class="date">October 26, 2025</p>
+                <p>The hospital expands its outpatient department to provide faster service and accommodate more patients.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<div class="container">
+        <div class="tabs">
+            <button class="tab-button" onclick="showTab('menu1')">💉 Vaccination</button>
+            <button class="tab-button active" onclick="showTab('menu2')">📰 News</button>
+            <button class="tab-button" onclick="showTab('menu3')">🏥 Services</button>
+        </div>
+
+
+        <div class="tab-content">
+            <div id="menu1" class="tab-pane">
+            <h1>Vaccination Schedule</h1>
+    <table>
+        <caption>Weekly Vaccination Schedule</caption>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Vaccine</th>
+                <th>Location</th>
+                <th>Doctor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>9:00 am</td>
+                <td>Influenza</td>
+                <td>Room 101</td>
+                <td>Dra. Susan Tolentino</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>10:00 am</td>
+                <td>Hepatitis B</td>
+                <td>Room 102</td>
+                <td>Dra. Susan Tolentino</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>11:00 am</td>
+                <td>Pentavalent</td>
+                <td>Room 103</td>
+                <td>Dr. David Catacutan</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>12:00 pm</td>
+                <td>Oral Poliovirus Vaccine (OPV)</td>
+                <td>Room 104</td>
+                <td>Dr. David Catacutan</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>1:00 pm</td>
+                <td>Pneumococcal Conjugate (PCV)</td>
+                <td>Room 105</td>
+                <td>Ms. Janet Malabanan</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>9:00 am</td>
+                <td>Rotavirus</td>
+                <td>Room 106</td>
+                <td>Dr. Lim Dela Cruz</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>10:00 am</td>
+                <td>Measles, Mumps, and Rubella (MMR)</td>
+                <td>Room 107</td>
+                <td>Ms. Janet Malabanan</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <div id="menu2" class="tab-pane active">
+        <h1 style="color:  #1a73e8;">News</h1>
+        <section class="health-news" style="width: 90%; max-width: 900px; margin: 40px auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+
+    <article style="background-color: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); margin-bottom: 20px;">
+        <h3 style="color: #0d47a1;">DOH Launches New Program about Teen Mental Health and Disaster Awareness</h3>
+        <p style="font-size: 0.9rem; color: gray;">Published: October 21, 2025</p>
+        <p>the Department of Health (DOH) strengthened its <strong>Peer Support Groups Playbook Program</strong>, which was launched today among students of <strong>Cavite National High School</strong>. The program highlights the importance of strengthening peer support groups to increase young people’s awareness of mental health and to encourage mutual support among students during disasters or in facing everyday challenges.</p>
+    </article>
+
+
+    <article style="background-color: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); margin-bottom: 20px;">
+        <h3 style="color: #0d47a1;">Free Flu Shots Available at Health Centers</h3>
+        <p style="font-size: 0.9rem; color: gray;">Published: October 21, 2025</p>
+        <p>All city health centers will be offering <strong>free influenza vaccinations</strong> this week to help prevent flu cases during the
+        peak season. Residents are advised to bring valid IDs and vaccination cards.</p>
+    </article>
+
+
+    <article style="background-color: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 3px 6px rgba(0,0,0,0.1);">
+        <h3 style="color: #0d47a1;">DOH New Campaign: TRANGKASO BYE-BYE!</h3>
+        <p style="font-size: 0.9rem; color: gray;">Published: October 20, 2025</p>
+        <p>The Department of Health (DOH) launched the “Trangkaso Bye-Bye!” campaign to educate the public on flu prevention through simple habits like handwashing, resting at home, and eating fruits and vegetables. Despite no flu outbreak, the DOH reminded the public that the country remains in flu season amid the changing monsoon. Recent data showed 6,457 influenza-like illness (ILI) cases from September 28 to October 11, 2025 — a 25% decrease compared to the same period in 2024.</p>
+    </article>
+</section>
+    </div>
+    <div id="menu3" class="tab-pane">
+    <h1>Services</h1>
+    <table id="services" cellspacing="0" cellpadding="8">
+        <caption>Medical Checkups</caption>
+        <thead style="background-color: #f2f2f2;">
+            <tr>
+                <th>Day</th>
+                <th>Services</th>
+                <th>Eligible Patients</th>
+                <th>Health Workers</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>Normal Checkups</td>
+                <td>Senior Citizen</td>
+                <td>
+                    <ul>
+                        <li>Dr. Jonathan Dela Cruz</li>
+                        <li>Mr. John Michael Panganiban</li>
+                        <li>Ms. Michelle Macapagal</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Normal Checkups</td>
+                <td>Senior Citizen</td>
+                <td>
+                    <ul>
+                        <li>Ms. Salima Gonzales</li>
+                        <li>Mr. John Michael Panganiban</li>
+                        <li>Ms. Michelle Macapagal</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Medical Checkup</td>
+                <td>Senior Citizen and Pre-natal</td>
+                <td>
+                    <ul>
+                        <li>Dr. Jonathan Dela Cruz</li>
+                        <li>Ms. Salima Gonzales</li>
+                        <li>Mr. John Michael Panganiban</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    </div>
+    </div>
+    </div>
+    <div>
+        <h2 class="alert-boxs">⚠️Health Alerts & Advisories</h2>
+    <div class="alert-box high">
+        <h3>🚨 Dengue Fever Advisory</h3>
+        <p>There has been a recent increase in dengue cases in the city. Please use mosquito repellents and ensure there is no stagnant water around your home.</p>
+        <p><strong>Date Issued:</strong> October 25, 2025</p>
+    </div>
+
+
+    <div class="alert-box medium">
+        <h3>🌋 Ashfall and Lahar</h3>
+        <p>Due to the sudden volcanic activity of Mount Kanlaon, the Department of Health (DOH) advises the public to take necessary precautions to protect their health and safety. People are urged to wear masks, preferably N95, or cover their nose and mouth with a damp cloth to avoid inhaling volcanic ash.</p>
+        <p><strong>Date Issued:</strong> October 23, 2025</p>
+    </div>
+
+
+    <div class="alert-box low">
+        <h3>😷 Flu Season</h3>
+        <p>The DOH clarified that there is no outbreak. However, since it is the usual flu season, the public is still advised to take precautions to avoid getting sick.</p>
+        <p><strong>Date Issued:</strong> October 20, 2025</p>
+    </div>
+     <footer>
+      <div style="max-width: 1200px; margin: 0 auto;">
+          <div style="float: left; width: 20%; margin-right: 2%;">
+              <img src="logo3.png" alt="The Medical City Icon" style="width: 100px; height: 100px;">
+              <h3 style="color: black; margin-bottom: 10px;">Barangay Mabini Health Center</h3>
+              <p style="color: black; margin-bottom: 10px;">899 Gonzalo Puyat St, Quiapo, Manila, 1001 Metro Manila</p>
+              <p style="color: black; margin-bottom: 5px;">📞 (632) 8988-1000</p>
+              <p style="color: black; margin-bottom: 5px;">📧 <a href="mailto:main@mabinihealthcenter.com" style="color: blue; text-decoration: none;">mail@mabinihealthcenter.com</a></p>
+              <p style="color: black;">📧 <a href="youtube.com" style="color: blue; text-decoration: none;">Media Requests</a></p>
+          </div>
+
+          <div style="float: left; width: 15%; margin-right: 2%;">
+              <h4 style="color: black; margin-bottom: 10px;">Services</h4>
+              <ul style="list-style: none; padding: 0; color: black;">
+                  <li><a href="#" style="color: blue; text-decoration: none;">Find a Schedule</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">Our Partners</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">DOH Advisories</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">Services</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">Operating Hours</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">Patients and Visitors Guide</a></li>
+              </ul>
+          </div>
+
+          <div style="float: left; width: 15%; margin-right: 2%;">
+              <h4 style="color: black; margin-bottom: 10px;">Our Institutes</h4>
+              <ul style="list-style: none; padding: 0; color: black;">
+                  <li><a href="#" style="color: blue; text-decoration: none;">Department of Health</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">Manila Health Department</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">Manila City Government</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">World Heath Organization</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">NCR Regional Medical Center</a></li>
+              </ul>
+          </div>
+
+          <div style="float: left; width: 15%; margin-right: 2%;">
+              <h4 style="color: black; margin-bottom: 10px;">LATEST NEWS</h4>
+              <ul style="list-style: none; padding: 0; color: black;">
+                  <li><a href="#" style="color: blue; text-decoration: none;">News and Health Articles</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">Health Advisories and Announcement</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">DOH News Network</a></li>
+              </ul>
+          </div>
+
+          <div style="float: left; width: 15%; margin-right: 2%;">
+              <h4 style="color: black; margin-bottom: 10px;">ABOUT US</h4>
+              <ul style="list-style: none; padding: 0; color: black;">
+                  <li><a href="#" style="color: blue; text-decoration: none;">About Mabini Health Center</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">Center Profile</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">Mission and Vision</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">Core Values</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">Office</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">Quality and Safety</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">Online Services</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">TeleConsultation Services</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">Online HMO Concierge</a></li>
+                  <li><a href="#" style="color: blue; text-decoration: none;">Online Screening</a></li>
+              </ul>
+          </div>
+
+          <div style="float: left; width: 15%;">
+              <h4 style="color: black; margin-bottom: 10px;">CONNECT</h4>
+              <p style="color: black;">
+                <b>Twitter: </b>Mabini_Center
+                <b>Instagram: </b> mabinihealthcenter
+                <b>Facebook: </b> Mabini Health Center
+                              </p>
+          </div>
+
+          <div style="clear: both;"></div>
+      </div>
+
+      <div style="text-align: center; border-top: 1px solid black; padding-top: 10px; margin-top: 20px;">
+          <p style="color: black; display: inline; margin: 0 10px;">
+              <a href="#" style="color: blue; text-decoration: none;">Privacy Policy</a> |
+              <a href="#" style="color: blue; text-decoration: none;">Terms & Conditions</a> |
+              <a href="#" style="color: blue; text-decoration: none;">Sitemap</a>
+          </p>
+          <p style="color: black;">Copyright © 2025 Introduction to Computing Project. All rights reserved.</p>
+      </div>
+  </footer>
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
